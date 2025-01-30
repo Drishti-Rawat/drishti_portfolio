@@ -475,7 +475,7 @@ const TechStackSection = () => {
   ];
 
   return (
-    <RevealSection className="relative min-h-screen py-20 px-4 bg-black ">
+    <RevealSection className="relative min-h-screen py-20 px-4 bg-black">
       <StaggerChildren>
         <WaveDecoration />
         <div className="max-w-7xl mx-auto mb-7">
@@ -495,7 +495,7 @@ const TechStackSection = () => {
           </FadeInChild>
 
           <FadeInChild>
-            <Card className="h-full bg-gradient-to-br from-white/5 to-white/10 border-white/10">
+            <Card className="bg-black border-neutral-800">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">
                   Technical Arsenal
@@ -515,7 +515,6 @@ const TechStackSection = () => {
     </RevealSection>
   );
 };
-
 
 const ProjectSection = () => {
   const projects = [
