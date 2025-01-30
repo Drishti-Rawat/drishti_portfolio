@@ -1,12 +1,9 @@
-'use client';
-import React from 'react';
-import {
-    motion,
-  
-  } from "framer-motion";
-import { Card, CardContent } from './ui/card';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "./ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github } from "lucide-react";
 const ProjectCard = ({ project }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
