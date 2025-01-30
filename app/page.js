@@ -494,7 +494,7 @@ const TechStackSection = () => {
             </div>
           </FadeInChild>
 
-          <FadeInChild>
+          
             <Card className="bg-gradient-to-br from-white/5 to-white/10 border-white/10">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">
@@ -502,14 +502,14 @@ const TechStackSection = () => {
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {techStack.map((item) => (
-                    <FadeInChild key={item.id}>
-                      <TechStack {...item} />
-                    </FadeInChild>
+                    
+                      <TechStack {...item} key={item.id} />
+                   
                   ))}
                 </div>
               </CardContent>
             </Card>
-          </FadeInChild>
+          
         </div>
       </StaggerChildren>
     </RevealSection>
@@ -580,9 +580,9 @@ const ProjectSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <FadeInChild key={index}>
-                <ProjectCard project={project} />
-              </FadeInChild>
+            
+                <ProjectCard project={project} key={index} />
+             
             ))}
           </div>
         </div>
