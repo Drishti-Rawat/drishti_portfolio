@@ -21,7 +21,7 @@ import { experiences} from "@/constants/data";
 
 const AboutSection = () => {
   return (
-    <RevealSection className="min-h-screen bg-black py-20 px-6  relative">
+    <RevealSection className=" bg-black py-20 px-6  relative">
       <StaggerChildren>
         <WaveDecoration />
         <div className="max-w-7xl mx-auto mb-7">

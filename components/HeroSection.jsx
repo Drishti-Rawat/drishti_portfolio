@@ -33,11 +33,11 @@ const MainContent = () => {
     document.body.removeChild(link);
   };
   return(
-  <RevealSection className="relative min-h-screen">
+  <RevealSection className="relative ">
     <WaveBackground />
 
     <motion.div
-      className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-16"
+      className="relative z-10 flex flex-col items-center justify-center  px-4 py-16"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.8 }}

@@ -6,7 +6,7 @@ import {  techStack } from "@/constants/data";
 
 const TechStackSection = () => {
   return (
-    <RevealSection className="relative min-h-screen py-20 px-4 bg-black">
+    <RevealSection className="relative  py-20 px-4 bg-black">
       <StaggerChildren>
         <WaveDecoration />
         <div className="max-w-7xl mx-auto mb-7">

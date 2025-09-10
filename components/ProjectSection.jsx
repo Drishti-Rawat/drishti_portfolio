@@ -11,7 +11,7 @@ import {  projects} from "@/constants/data";
 const ProjectSection = () => {
   
   return (
-    <RevealSection className="relative min-h-screen py-20 px-4 md:px-6 bg-black ">
+    <RevealSection className="relative  py-20 px-4 md:px-6 bg-black ">
       <StaggerChildren>
         <WaveDecoration />
         <div className="max-w-7xl mx-auto mb-7">
