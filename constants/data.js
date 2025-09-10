@@ -28,24 +28,36 @@ export const experiences = [
    
   ];
 
-export  const techStack = [
-      { id: "html", tech: "HTML5", image: "/html_5.png" },
-      { id: "css", tech: "CSS3", image: "/css.png" },
-      { id: "js", tech: "JavaScript", image: "/javascript.png" },
-      { id: "ts", tech: "TypeScript", image: "/typescript.png" },
-      { id: "tailwind", tech: "Tailwind CSS", image: "/tailwindcss.png" },
-      { id: "angular", tech: "Angular.js", image: "/AngularJS.png" },
-      { id: "reactjs", tech: "React.js", image: "/react.png" },
-      { id: "nextjs", tech: "Next.js", image: "/nextjs.png" },
-      { id: "nodejs", tech: "Node.js", image: "/node.png" },
-      { id: "express", tech: "Express.js", image: "/express.png" },
-      { id: "mongodb", tech: "MongoDB", image: "/mongodb.png" },
-      { id: "mysql", tech: "MySQL", image: "/mysql.png" },
-      { id: "postgreSql", tech: "PostgreSQL", image: "/PostgresSQL.png" },
-      { id: "framer", tech: "Framer Motion", image: "/FramerMotion.png" },
-      { id: "postman", tech: "Postman", image: "/Postman.png" },
-      { id: "github", tech: "GitHub", image: "/GitHub.png" },
-    ];
+export const techStack = [
+  // Frontend Basics
+  { id: "html", tech: "HTML5", image: "/html_5.png" },
+  { id: "css", tech: "CSS3", image: "/css.png" },
+  { id: "js", tech: "JavaScript", image: "/javascript.png" },
+  { id: "ts", tech: "TypeScript", image: "/typescript.png" },
+
+  // Styling / UI
+  { id: "tailwind", tech: "Tailwind CSS", image: "/tailwindcss.png" },
+
+  // Frontend Frameworks
+  { id: "reactjs", tech: "React.js", image: "/react.png" },
+  { id: "nextjs", tech: "Next.js", image: "/nextjs.png" },
+  { id: "angular", tech: "Angular.js", image: "/AngularJS.png" },
+
+  // Backend
+  { id: "nodejs", tech: "Node.js", image: "/node.png" },
+  { id: "express", tech: "Express.js", image: "/express.png" },
+
+  // Databases
+  { id: "mongodb", tech: "MongoDB", image: "/mongodb.png" },
+  { id: "mysql", tech: "MySQL", image: "/mysql.png" },
+  { id: "redis", tech: "Redis", image: "/Redis.png" },
+
+  // Tools / Others
+  { id: "framer", tech: "Framer Motion", image: "/FramerMotion.png" },
+  { id: "postman", tech: "Postman", image: "/Postman.png" },
+  { id: "github", tech: "GitHub", image: "/GitHub.png" },
+];
+
 
   export  const projects = [
      {
