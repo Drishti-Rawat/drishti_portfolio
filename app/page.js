@@ -73,13 +73,21 @@ export default function Portfolio() {
 
 
 
+
+
 const IntroSequence = ({ onComplete }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const introTexts = [
     "Hello",
     "Welcome to my Portfolio",
     "Where creativity meets code",
   ];
+
+  useEffect(() => {
+    // Set window size after component mounts (client-side only)
+    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -93,7 +101,6 @@ const IntroSequence = ({ onComplete }) => {
     return () => clearTimeout(timer);
   }, [currentTextIndex, onComplete]);
 
-  // Generate some falling objects
   const fallingObjects = Array.from({ length: 15 }, (_, i) => i);
 
   return (
@@ -103,7 +110,7 @@ const IntroSequence = ({ onComplete }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Animated lines background */}
+      {/* Animated lines */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ x: "-100%" }}
@@ -129,23 +136,24 @@ const IntroSequence = ({ onComplete }) => {
         />
 
         {/* Falling purple shapes */}
-        {fallingObjects.map((obj) => (
-          <motion.div
-            key={obj}
-            initial={{ y: -50, x: Math.random() * window.innerWidth }}
-            animate={{ y: window.innerHeight + 50 }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "linear",
-            }}
-            className="absolute w-2 h-2 rounded-full bg-purple-500 opacity-70"
-          />
-        ))}
+        {windowSize.width > 0 &&
+          fallingObjects.map((obj) => (
+            <motion.div
+              key={obj}
+              initial={{ y: -50, x: Math.random() * windowSize.width }}
+              animate={{ y: windowSize.height + 50 }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "linear",
+              }}
+              className="absolute w-2 h-2 rounded-full bg-purple-500 opacity-70"
+            />
+          ))}
       </div>
 
-      {/* Central text animation */}
+      {/* Central text */}
       <div className="relative z-10">
         <AnimatePresence mode="wait">
           <motion.div
@@ -163,7 +171,7 @@ const IntroSequence = ({ onComplete }) => {
         </AnimatePresence>
       </div>
 
-      {/* Bottom reveal line */}
+      {/* Bottom line */}
       <motion.div
         className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500"
         initial={{ scaleX: 0 }}
@@ -173,8 +181,6 @@ const IntroSequence = ({ onComplete }) => {
     </motion.div>
   );
 };
-
-
 
 
 
