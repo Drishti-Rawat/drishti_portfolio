@@ -55,7 +55,7 @@ const MainContent = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <span className="px-6 py-2 rounded-full bg-purple-500/20 backdrop-blur-sm text-purple-400 font-semibold text-lg">
+          <span className="px-6 py-2 rounded-full bg-purple-500/10 backdrop-blur-sm text-purple-400 font-semibold text-lg">
             Ready to Collaborate
           </span>
         </motion.div>
@@ -73,11 +73,7 @@ const MainContent = () => {
  bg-clip-text text-transparent">
               Drishti
             </span>
-            <motion.span 
-              className="absolute -top-2 -right-2 w-2 h-2 bg-purple-400 rounded-full"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
+           
           </span>
         </motion.h1>
 
