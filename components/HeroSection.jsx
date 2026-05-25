@@ -2,173 +2,176 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
-import { FadeInChild, RevealSection, StaggerChildren, WaveBackground, WaveDecoration } from "@/lib/Animation";
+import { FileText, Github, Linkedin, Mail, ArrowRight, Sparkles } from "lucide-react";
+import { WaveBackground } from "@/lib/Animation";
 import SocialLink from "@/components/SocialLink";
 
 const MainContent = () => {
 
-  // Function to handle resume download
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/drishti_resume.pdf'; 
-    link.download = 'Drishti_Resume.pdf'; 
+    link.href = '/drishti_resume.pdf';
+    link.download = 'Drishti_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <RevealSection className="relative">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 px-4 bg-[#050508]">
       <WaveBackground />
 
-      <motion.div
-        className="relative z-10 flex flex-col items-center justify-center px-4 py-16"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-      >
+      <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
+
+        {/* Left Side: Professional Bio */}
         <motion.div
-          className="max-w-7xl mx-auto text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          className="flex-1 text-left space-y-6"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Professional Focus Banner */}
+          {/* Badge */}
           <motion.div
-            className="mb-6 inline-block"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 backdrop-blur-md text-indigo-400 font-medium text-sm"
           >
-            <span className="px-6 py-2 rounded-full bg-purple-500/10 backdrop-blur-sm text-purple-400 font-semibold text-lg">
-              Ready to Collaborate
-            </span>
+            <Sparkles className="w-4 h-4 text-indigo-400" />
+            <span>Open to Opportunities & Collaboration</span>
           </motion.div>
 
-          {/* Name Container */}
-          <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-          >
-            Hello, I'm{" "}
-            <motion.span
-              className="relative inline-block"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0 }}
-            >
-              <span className="bg-gradient-to-r from-purple-500 via-purple-400 to-purple-500 bg-clip-text text-transparent">
+          {/* Heading */}
+          <div className="space-y-3">
+            <h2 className="text-sm font-semibold text-gray-500 tracking-[0.2em] uppercase font-mono">
+              Full Stack Web Artisan
+            </h2>
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
+              Hello, I'm{" "}
+              <span className="bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent font-black">
                 Drishti
               </span>
-            </motion.span>
-          </motion.h1>
+            </h1>
+          </div>
 
-          {/* Role and Expertise */}
-          <motion.div
-            className="mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">
-              Full Stack Developer
-              <motion.span
-                className="block text-xl md:text-2xl mt-4 bg-gradient-to-r from-purple-400 to-purple-400 bg-clip-text text-transparent"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4 }}
-              >
-                Building Modern Web Experiences
-              </motion.span>
-            </h2>
+          {/* Bio Description */}
+          <p className="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed font-normal">
+            I craft clean, high-performance, and visually stunning web applications, bridging elegant frontend interfaces with robust, scalable backend architectures.
+          </p>
 
-            <motion.p
-              className="text-lg md:text-xl italic text-gray-300 leading-relaxed max-w-3xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.6 }}
-            >
-              Passionate about building innovative web solutions that bridge creativity and functionality.
-              Specializing in modern full-stack development to create seamless, user-centric applications.
-            </motion.p>
-          </motion.div>
-
-          {/* Social Links */}
-          <motion.div
-            className="flex justify-center gap-6 mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.8 }}
-          >
-            <SocialLink
-              icon={Github}
-              href="https://github.com/Drishti-Rawat/"
-              label="Projects"
-              className="bg-white/20 hover:bg-white/10 p-4 rounded-lg backdrop-blur-sm"
-            />
-            <SocialLink
-              icon={Linkedin}
-              href="https://www.linkedin.com/in/drishti-rawat-250573216/"
-              label="LinkedIn"
-              className="bg-white/20 hover:bg-white/10 p-4 rounded-lg backdrop-blur-sm"
-            />
-            <SocialLink
-              icon={Mail}
-              href="mailto:drishtirwt019@gmail.com"
-              label="Email"
-              className="bg-white/20 hover:bg-white/10 p-4 rounded-lg backdrop-blur-sm"
-            />
-          </motion.div>
-
-          {/* Call to Action Buttons */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.0 }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 2.2 }}
-            >
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 pt-4">
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button
-                variant="outline"
                 size="lg"
                 onClick={handleResumeDownload}
-                className="px-8 py-3 bg-white/15 text-white hover:text-white border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-sm rounded-xl group flex cursor-pointer"
+                className="px-8 py-6 bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-md rounded-2xl flex items-center gap-2 group cursor-pointer transition-all duration-300 shadow-sm"
               >
-                <FileText className="w-6 h-6 mr-3 group-hover:rotate-6 transition-transform" />
-                <span className="text-lg">My Resume</span>
+                <FileText className="w-5 h-5 group-hover:rotate-3 transition-transform" />
+                <span className="text-base font-semibold">My Resume</span>
               </Button>
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 2.4 }}
-            >
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <a href="#contact">
                 <Button
                   size="lg"
-                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-xl text-white group flex cursor-pointer"
+                  className="px-8 py-6 bg-white hover:bg-zinc-200 text-black rounded-2xl flex items-center gap-2 group cursor-pointer transition-all duration-300 shadow-sm"
                 >
-                  <Mail className="w-6 h-6 mr-3 group-hover:rotate-6 transition-transform" />
-                  <span className="text-lg">Get in Touch</span>
+                  <span className="text-base font-semibold">Get in Touch</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
             </motion.div>
-          </motion.div>
+          </div>
         </motion.div>
-      </motion.div>
-    </RevealSection>
+
+        {/* Right Side: Interactive Visual Dashboard / Glass Card */}
+        <motion.div
+          className="flex-1 w-full max-w-[500px]"
+          initial={{ opacity: 0, x: 50, scale: 0.9 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
+          <div className="relative group w-full aspect-square md:aspect-[4/3.8] rounded-[2.5rem] p-8 glass-card border border-zinc-800 shadow-2xl flex flex-col justify-between overflow-hidden bg-black/25">
+
+            {/* Simulated Window Control Buttons */}
+            <div className="relative z-10 flex justify-between items-center">
+              <div className="flex gap-2">
+                <div className="w-3.5 h-3.5 rounded-full bg-rose-500/60" />
+                <div className="w-3.5 h-3.5 rounded-full bg-amber-500/60" />
+                <div className="w-3.5 h-3.5 rounded-full bg-emerald-500/60" />
+              </div>
+              <span className="text-[11px] font-mono text-gray-500 uppercase tracking-widest select-none">
+                DR-v2.0.26
+              </span>
+            </div>
+
+            {/* Main Details */}
+            <div className="relative z-10 space-y-6 my-auto pt-6">
+              <div className="space-y-2">
+                <p className="text-xs font-mono text-indigo-400 uppercase tracking-wider">
+                  &lt;Core Stack&gt;
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["React.js", "Next.js", "Node.js", "PostgreSQL", "TailwindCSS"].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3.5 py-1.5 rounded-xl bg-indigo-500/5 border border-indigo-500/10 text-xs font-mono text-indigo-300 shadow-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-3xl font-black text-white tracking-tight">
+                  Design. Code. Deploy.
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed font-sans">
+                  Transforming conceptual complexities into fluid and responsive web interactions.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom Row: Social links and active status */}
+            <div className="relative z-10 flex justify-between items-center border-t border-zinc-850 pt-6 mt-6">
+              <div className="flex items-center gap-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-indigo-400 animate-pulse shadow-sm shadow-indigo-400/50" />
+                <span className="text-xs font-semibold text-gray-405 font-mono">
+                  Ready to deploy
+                </span>
+              </div>
+
+              {/* Social links */}
+              <div className="flex gap-4">
+                <SocialLink
+                  icon={Github}
+                  href="https://github.com/Drishti-Rawat/"
+                  label="GitHub"
+                  className="text-gray-400 hover:text-white transition-colors"
+                />
+                <SocialLink
+                  icon={Linkedin}
+                  href="https://www.linkedin.com/in/drishti-rawat-250573216/"
+                  label="LinkedIn"
+                  className="text-gray-400 hover:text-white transition-colors"
+                />
+                <SocialLink
+                  icon={Mail}
+                  href="mailto:drishtirwt019@gmail.com"
+                  label="Email"
+                  className="text-gray-400 hover:text-white transition-colors"
+                />
+              </div>
+            </div>
+
+          </div>
+        </motion.div>
+
+      </div>
+    </div>
   );
 };
 

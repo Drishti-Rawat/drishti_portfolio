@@ -12,15 +12,15 @@ export const experiences = [
     company: "PeopleStrong",
     period: "August 2025",
     description:
-      "Worked as a Software Engineer Trainee, focusing on full-stack development. Utilized Angular, Node.js, MariaDB, and TailwindCSS to build and maintain web applications, enhancing both frontend interactivity and backend performance.",
+      "Completed a structured Software Engineer Trainee program. Trained in full-stack web technologies including Angular, Node.js, MariaDB, and TailwindCSS to learn frontend layouts and backend concepts.",
     type: "internship",
   },
   {
     title: "Full Stack Developer",
     company: "Xellerate",
-    period: "November 2024 - Present",
+    period: "November 2024 - August 2025",
     description:
-      "Currently working on a platform that involves both frontend and backend development. Utilized React, Node.js, and PostgreSQL to build and maintain scalable web applications, focusing on creating a seamless user experience and optimizing server-side performance.",
+      "Worked on a platform that involved both frontend and backend development. Utilized React, Node.js, and PostgreSQL to build and maintain scalable web applications, focusing on creating a seamless user experience and optimizing server-side performance.",
     type: "internship",
   },
   {
@@ -64,7 +64,7 @@ export const techStack = [
   { id: "github", tech: "GitHub", image: "/GitHub.png" },
 ];
 
- export  const projects = [
+export const projects = [
   {
     title: "FinMate AI",
     description:
@@ -150,4 +150,4 @@ export const techStack = [
     image: "/projects/Agency.png",
     liveLink: "https://agency-pi-pink.vercel.app/",
   },
-]
+];
