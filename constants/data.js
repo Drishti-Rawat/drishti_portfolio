@@ -74,6 +74,30 @@ export const projects = [
     liveLink: "https://finmateai.vercel.app/",
   },
   {
+    title: "Friday Sorted",
+    description:
+      "A creative idea generation platform built to brainstorm and discover fun, engaging Friday activities. Designed as a sleek frontend-only web application.",
+    technologies: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
+    image: "/projects/friday-sorted.png",
+    liveLink: "https://friday-sorted-two.vercel.app/",
+  },
+  {
+    title: "NOORÉ - Women's Boutique",
+    description:
+      "A chic and modern frontend e-commerce storefront for a luxury women's boutique store. Features curated fashion collections, smooth layout transitions, and rich interactive visual storytelling.",
+    technologies: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
+    image: "/projects/noore.png",
+    liveLink: "https://womens-boutique-store.vercel.app/",
+  },
+  {
+    title: "WorkWise - Employee Assistant",
+    description:
+      "An AI-powered workplace and HR assistant platform built with mock data. Helps employees navigate company policies, apply for leave, search employee directories, and get IT support through an interactive chat interface.",
+    technologies: ["Next.js", "React", "TailwindCSS", "TypeScript"],
+    image: "/projects/work-wise.png",
+    liveLink: "https://employee-assistant-assignment.vercel.app/",
+  },
+  {
     title: "Elara Perfume",
     description:
       "A high-end, minimal e-commerce experience for a luxury perfume brand. Features smooth page transitions, custom cart controls, and premium product showcases built with modern frontend frameworks.",
